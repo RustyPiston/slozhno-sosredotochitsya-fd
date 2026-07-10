@@ -1,13 +1,13 @@
 .page {
   background-image: var(--bg-image);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
 }
 
 .header {
+  height: 100vh;
   min-height: 668px;
   display: grid;
   grid-template-rows: repeat(3, min-content);
@@ -53,7 +53,7 @@
 }
 
 .header__theme-menu {
-  margin: 76px 0 0 0;
+  margin: 76px 8px 0 0;
 }
 
 .header__theme-menu-list {
@@ -74,7 +74,6 @@
   border: none;
   color: var(--accent-color);
   text-transform: lowercase;
-  letter-spacing: 10%;
 }
 
 .header_title {
@@ -96,10 +95,6 @@
   line-height: 23.4px;
   background-color: var(--accent-color);
   margin-top: 55px;
-}
-
-.header_title-text p {
-  word-spacing: 20%;
 }
 
 main {
@@ -141,7 +136,6 @@ main {
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
-  letter-spacing: 6%;
 }
 
 .li_main {
@@ -151,6 +145,11 @@ main {
   font-size: 18px;
   line-height: 23.4px;
   color: var(--text-color);
+}
+
+span:hover {
+  text-decoration: underline var(--text-color);
+  text-underline-offset: 3px;
 }
 
 .text-accent {
@@ -240,6 +239,45 @@ footer p {
   max-inline-size: 100%;
 }
 
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.header__theme-menu-button:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+  --bg-color: rgb(245, 245, 220);
+  --bg-image: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+  --title-color: #FFC2E6;
+  --li_title-color: #353430;
+  --decorative-color: #353430;
+  }
+
+  .rectangle_top-text,
+  .rectangle_top::before {
+  display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+  --bg-color: rgb(12, 18, 45);
+  --bg-image: url(../images/cover-image-dark.png);
+  --text-color: #F1B2CE;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --li_title-color: #000028;
+  --decorative-color: #FF0070;
+  }
+}
+
+
 @media (min-width: 768px) {
           /* Начало Header */
   .header {
@@ -304,7 +342,6 @@ footer p {
     grid-template-columns: 1fr min-content;
     margin-top: 60px;
     justify-content: space-between;
-    margin-top: 80px;
   }
 
   .goldfish article {
@@ -467,31 +504,4 @@ footer p {
     font-size: 157px;
   }
         /*Конец Footer*/
-}
-
-
-
-
-@media (prefers-color-scheme: light) {
-  :root.theme-auto {
-  --bg-color: rgb(245, 245, 220);
-  --bg-image: url(../images/cover-image-light.png);
-  --text-color: #353430;
-  --accent-color: #FF8DCB;
-  --title-color: #FFC2E6;
-  --li_title-color: #353430;
-  --decorative-color: #353430;
-}
-}
-
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto {
-  --bg-color: rgb(12, 18, 45);
-  --bg-image: url(../images/cover-image-dark.png);
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --title-color: #DB00FF;
-  --li_title-color: #000028;
-  --decorative-color: #FF0070;
-  }
 }
