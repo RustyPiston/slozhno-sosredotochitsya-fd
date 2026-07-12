@@ -3,12 +3,37 @@
   --bg-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --accent-color: #FF8DCB;
+  --accent-color_button: #32312D66;
   --title-color: #FFC2E6;
   --li_title-color: #353430;
   --decorative-color: #353430;
 }
 
-.rectangle_top-text,
-.rectangle_top::before {
+:root.theme-light header .rectangle_top::before {
   display: none;
+}
+
+:root.theme-light header .rectangle_top-text {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --bg-color: rgb(245, 245, 220);
+  --bg-image: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+  --accent-color_button: #32312D66;
+  --title-color: #FFC2E6;
+  --li_title-color: #353430;
+  --decorative-color: #353430;
+  }
+
+  :root:not(.theme-dark) header .rectangle_top::before {
+  display: none;
+}
+
+  :root:not(.theme-dark) header .rectangle_top-text {
+  display: none;
+}
 }

@@ -94,6 +94,7 @@
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
+  color: var(--li_title-color);
   margin-top: 55px;
 }
 
@@ -147,9 +148,18 @@ main {
   color: var(--text-color);
 }
 
-span:hover {
+a {
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline var(--text-color);
   text-underline-offset: 3px;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 1px solid var(--text-color);
 }
 
 .text-accent {
@@ -157,7 +167,7 @@ span:hover {
   background-color: var(--accent-color);
 }
 
-li span {
+li a {
   text-shadow: 2px 1px var(--accent-color);
 }
 
@@ -245,38 +255,21 @@ footer p {
 }
 
 .header__theme-menu-button:hover {
-  text-decoration: underline;
+  outline: 1px solid var(--accent-color_button);
+  outline-offset: 3px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root.theme-auto {
-  --bg-color: rgb(245, 245, 220);
-  --bg-image: url(../images/cover-image-light.png);
-  --text-color: #353430;
-  --accent-color: #FF8DCB;
-  --title-color: #FFC2E6;
-  --li_title-color: #353430;
-  --decorative-color: #353430;
-  }
-
-  .rectangle_top-text,
-  .rectangle_top::before {
-  display: none;
-  }
+.header__theme-menu-button:focus,
+.header__theme-menu-button_active:focus {
+  outline: none;
+  text-decoration: 1px underline var(--accent-color);
+  text-underline-offset: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto {
-  --bg-color: rgb(12, 18, 45);
-  --bg-image: url(../images/cover-image-dark.png);
-  --text-color: #F1B2CE;
-  --accent-color: #FF0070;
-  --title-color: #DB00FF;
-  --li_title-color: #000028;
-  --decorative-color: #FF0070;
-  }
+.header__theme-menu-button_active:hover {
+  outline: 1px solid var(--accent-color_button);
+  outline-offset: 3px;
 }
-
 
 @media (min-width: 768px) {
           /* Начало Header */
@@ -291,6 +284,11 @@ footer p {
   .header .rectangle_top {
     top: 20px;
     right: 20px;
+  }
+
+  .header .rectangle_bottom {
+    bottom: 20px;
+    left: 20px;
   }
 
   .rectangle_top-text {
@@ -318,7 +316,7 @@ footer p {
   .attention_factors {
     display: grid;
     grid-template-columns: repeat(2, min-content);
-    margin-top: 242px;
+    margin-top: 60px;
     justify-content: space-between;
   }
 
@@ -340,7 +338,7 @@ footer p {
   .goldfish {
     display: grid;
     grid-template-columns: 1fr min-content;
-    margin-top: 60px;
+    margin-top: 80px;
     justify-content: space-between;
   }
 
@@ -453,7 +451,7 @@ footer p {
   .attention_factors {
     display: grid;
     grid-template-columns: min-content 1fr;
-    margin-top: 160px;
+    margin-top: 60px;
     justify-content: space-between;
   }
 
