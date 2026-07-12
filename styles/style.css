@@ -124,7 +124,7 @@ main {
   font-weight: var(--font-weight_bold);
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--li_title-color);
+  color: var(--accent-color_title);
   margin-bottom: 20px;
 }
 
