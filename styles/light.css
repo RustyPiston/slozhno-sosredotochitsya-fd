@@ -1,5 +1,5 @@
 :root.theme-light {
-  --bg-color: rgb(245, 245, 220);
+  --bg-color: rgb(255, 225, 233);
   --bg-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --accent-color: #FF8DCB;
