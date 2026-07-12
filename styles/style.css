@@ -3,6 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   background-color: var(--bg-color);
 }
 
@@ -123,7 +124,7 @@ main {
   font-weight: var(--font-weight_bold);
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--li_title-color);
   margin-bottom: 20px;
 }
 

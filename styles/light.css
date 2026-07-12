@@ -1,11 +1,11 @@
 :root.theme-light {
   --bg-color: rgb(255, 225, 233);
-  --bg-image: url(../images/cover-image-light.png);
+  --bg-image: url(./images/cover-image-light.png);
   --text-color: #353430;
   --accent-color: #FF8DCB;
   --accent-color_button: #32312D66;
   --title-color: #FFC2E6;
-  --li_title-color: #353430;
+  v: #353430;
   --decorative-color: #353430;
 }
 
@@ -19,7 +19,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-  --bg-color: rgb(245, 245, 220);
+  --bg-color: rgb(255, 225, 233);
   --bg-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --accent-color: #FF8DCB;
