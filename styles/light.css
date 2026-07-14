@@ -1,6 +1,6 @@
 :root.theme-light {
   --bg-color: #FFF1F7;
-  --bg-image: url(./images/cover-image-light.png);
+  --bg-image: url(../images/cover-image-light.png);
   --text-color: #353430;
   --accent-color: #FF8DCB;
   --accent-color_title: #353430;
@@ -10,11 +10,11 @@
   --decorative-color: #353430;
 }
 
-:root.theme-light header .rectangle_top::before {
+:root.theme-light .page::before {
   display: none;
 }
 
-:root.theme-light header .rectangle_top-text {
+:root.theme-light .page::after {
   display: none;
 }
 
@@ -30,11 +30,11 @@
   --decorative-color: #353430;
   }
 
-  :root:not(.theme-dark) header .rectangle_top::before {
+  :root:not(.theme-dark) .page::before {
   display: none;
 }
 
-  :root:not(.theme-dark) header .rectangle_top-text {
-  display: none;
-}
+  :root:not(.theme-dark) .page::after {
+    display: none;
+  }
 }
