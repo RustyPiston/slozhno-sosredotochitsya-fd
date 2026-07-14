@@ -1,6 +1,10 @@
 :root.theme-dark {
     --bg-color: rgb(12, 18, 45);
+<<<<<<< HEAD
     --bg-image: url(../images/cover-image-dark.png);
+=======
+    --bg-image: url(./images/cover-image-dark.png);
+>>>>>>> 8693bbf953f7ea90fed2308134ab4f90654b56a3
     --text-color: #F1B2CE;
     --accent-color: #FF0070;
     --accent-color_title: #FF0070;
