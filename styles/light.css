@@ -1,10 +1,6 @@
 :root.theme-light {
   --bg-color: #FFF1F7;
-<<<<<<< HEAD
-  --bg-image: url(../images/cover-image-light.png);
-=======
   --bg-image: url(./images/cover-image-light.png);
->>>>>>> 8693bbf953f7ea90fed2308134ab4f90654b56a3
   --text-color: #353430;
   --accent-color: #FF8DCB;
   --accent-color_title: #353430;
@@ -14,19 +10,11 @@
   --decorative-color: #353430;
 }
 
-<<<<<<< HEAD
-:root.theme-light .page::before {
-  display: none;
-}
-
-:root.theme-light .page::after {
-=======
 :root.theme-light header .rectangle_top::before {
   display: none;
 }
 
 :root.theme-light header .rectangle_top-text {
->>>>>>> 8693bbf953f7ea90fed2308134ab4f90654b56a3
   display: none;
 }
 
@@ -42,16 +30,6 @@
   --decorative-color: #353430;
   }
 
-<<<<<<< HEAD
-  :root:not(.theme-dark) .page::before {
-  display: none;
-}
-
-  :root:not(.theme-dark) .page::after {
-    display: none;
-  }
-}
-=======
   :root:not(.theme-dark) header .rectangle_top::before {
   display: none;
 }
@@ -60,4 +38,3 @@
   display: none;
 }
 }
->>>>>>> 8693bbf953f7ea90fed2308134ab4f90654b56a3
