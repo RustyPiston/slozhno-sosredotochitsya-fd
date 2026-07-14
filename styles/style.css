@@ -255,7 +255,7 @@ footer p {
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
   outline-offset: 3px;
-   pointer-events: none; 
+  pointer-events: none; 
 }
 
 .header__theme-menu-button:hover {
