@@ -61,6 +61,7 @@
 
 .background-accent {
   background-color: var(--accent-color);
+  color: var(--li-title_text-color);
 }
 
 .text-accent {
@@ -164,10 +165,8 @@
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--accent-color);
-  color: var(--li_title-color);
   align-self: end;
   margin-bottom: 65px;
-  color: var(--li-title_text-color);
 }
 /*---------- Конец Header ----------*/
 /*---------- Начало Main ----------*/
