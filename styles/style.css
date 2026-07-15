@@ -66,11 +66,11 @@
 
 .text-accent {
   background-color: transparent;
-  color: var(--accent-color);
+  color: var(--content_title-color);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--decorative-color);
   outline-offset: 3px;
   pointer-events: none;
 }
@@ -83,13 +83,32 @@
 .header__theme-menu-button:focus,
 .header__theme-menu-button_active:focus {
   outline: none;
-  text-decoration: 1px underline var(--accent-color);
+  text-decoration: 1px underline var(--decorative-color);
   text-underline-offset: 5px;
 }
 
 .header__theme-menu-button_active:hover {
   outline: 1px solid var(--accent-color_button);
   outline-offset: 3px;
+}
+
+.text-link {
+  text-shadow: 1px 1px var(--accent-color);
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid var(--main_text-color);
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  text-decoration: none;
+  outline: 1px solid var(--link_decoration-color);
 }
 /*---------- Общие стили ----------*/
 /*---------- Начало Header ----------*/
