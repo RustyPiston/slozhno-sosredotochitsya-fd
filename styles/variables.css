@@ -2,11 +2,12 @@
   --font-family: 'IBM Plex Mono', sans-serif;
   --font-weight_bold: 700;
   --font-weight_normal: 400;
-  --bg-color: rgb(12, 18, 45);
+  --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
-  --text-color: #F1B2CE;
+  --main_text-color: #F1B2CE;
   --accent-color: #FF0070;
   --title-color: #DB00FF;
-  --li_title-color: #000028;
-  --decorative-color: #FF0070;
+  --li-title_text-color: #000028;
+  --font-size: 18px;
+  --line-height: 23.4px;
 }

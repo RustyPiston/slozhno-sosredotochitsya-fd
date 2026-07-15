@@ -1,3 +1,4 @@
+/*---------- Общие стили ----------*/
 .page {
   background-image: var(--bg-image);
   background-position: center;
@@ -58,17 +59,54 @@
   border-bottom: 1px solid var(--decorative-color);
 }
 
+.background-accent {
+  background-color: var(--accent-color);
+  color: var(--li-title_text-color);
+}
+
+.text-accent {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 3px;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color_button);
+  outline-offset: 3px;
+}
+
+.header__theme-menu-button:focus,
+.header__theme-menu-button_active:focus {
+  outline: none;
+  text-decoration: 1px underline var(--accent-color);
+  text-underline-offset: 5px;
+}
+
+.header__theme-menu-button_active:hover {
+  outline: 1px solid var(--accent-color_button);
+  outline-offset: 3px;
+}
+/*---------- Общие стили ----------*/
+/*---------- Начало Header ----------*/
 .header {
   height: 100vh;
   min-height: 668px;
+  padding: 0 10px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  padding: 0 10px 0;
   font-family: var(--font-family);
 }
 
 .header__theme-menu {
-  margin: 76px 8px 0 0;
+  align-self: center;
+  justify-self: end;
+  font-weight: var(--font-weight_normal);
+  margin: 9px 7px 0 0 ;
 }
 
 .header__theme-menu-list {
@@ -76,8 +114,7 @@
   flex-direction: column;
   font-family: var(--font-family);
   font-weight: var(--font-weight_normal);
-  font-style: normal;
-  font-size: 18px;
+  font-size: var(--font-size);
   line-height: 18px;
   text-align: center;
   gap: 16px;
@@ -106,117 +143,66 @@
 .header_title-text {
   font-family: var(--font-family);
   font-weight: var(--font-weight_bold);
-  font-size: 18px;
-  line-height: 23.4px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   background-color: var(--accent-color);
   color: var(--li_title-color);
   align-self: end;
-  margin-bottom: 66px;
+  margin-bottom: 65px;
 }
-
-main {
-  padding: 0 10px 0;
+/*---------- Конец Header ----------*/
+/*---------- Начало Main ----------*/
+.main {
+  padding: 0 10px;
 }
 
 .content-section {
-  margin-top: 50px;
+  font-family: var(--font-family);
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0px;
+  gap: 19px;
+  margin-top: 50px;
 }
 
-.attention_factors {
+.content-section_title {
+  font-weight: var(--font-weight_bold);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.content-section_main {
+  display: grid;
+  gap: 20px;
+}
+
+.content-section_main-item {
+  display: grid;
+  gap: 9.5px;
+}
+
+.concentrate {
   margin-top: 40px;
 }
- 
-.section_main {
-  display: grid;
-  gap: 20px;
+
+.li-main {
+  color: var(--main_text-color);
+  font-weight: var(--font-weight_normal);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
-.section_main-item {
-  display: grid;
-  gap: 10px;
-}
-
-.section_title {
-  font-family: var(--font-family);
+.goldfish-advices {
   font-weight: var(--font-weight_bold);
-  font-size: 18px;
-  line-height: 23.4px;
-  color: var(--accent-color_title);
-  margin-bottom: 20px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  
 }
 
-.what_reduce_concentration {
-  margin-top: 50px;
-}
-
-.li_title {
-  font-family: var(--font-family);
+.goldfish .li-title {
   font-weight: var(--font-weight_normal);
-  font-style: normal;
-  font-size: 18px;
-  line-height: 23.4px;
 }
 
-.li_main {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight_normal);
-  font-style: normal;
-  font-size: 18px;
-  line-height: 23.4px;
-  color: var(--text-color);
-}
-
-.li_main a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline var(--text-color);
-  text-underline-offset: 3px;
-}
-
-a:focus {
-  outline: none;
-}
-
-a:focus-visible {
-  text-decoration: none;
-  outline: 1px solid var(--text-color);
-}
-
-.text-accent {
-  color: var(--li_title-color);
-  background-color: var(--accent-color);
-}
-
-li a {
-  text-shadow: 2px 1px var(--accent-color);
-}
-
-.goldfish {
-  display: grid;
-  gap: 20px;
-}
-
-.goldfish .section_title {
-  margin-bottom: 0;
-}
-
-.concentration_main {
-  display: grid;
-  gap: 20px;
-}
-
-.goldfish article {
-  display: grid;
-  gap: 20px;
-}
-
-.pictures {
-  margin-top: 50px;
+.pictures.content-section {
+  gap: 0;
 }
 
 .pictures_images {
@@ -230,85 +216,63 @@ li a {
   width: 100%;
   height: auto;
 }
-
+/*---------- Конец Main ----------*/
+/*---------- Начало Footer ----------*/
 .footer {
-  margin-top: 35px;
-  padding: 10px;
   height: 100vh;
   min-height: 668px;
+  padding: 0 10px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-footer p {
-  justify-self: center;
-  align-self: center;
+.footer_text {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--font-family);
   font-weight: var(--font-weight_bold);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
   color: var(--title-color);
   text-shadow: 2px 2px var(--accent-color);
-  max-inline-size: 100%;
+  margin-left: 4px;
+  align-self: center;
+  justify-self: center;
 }
-
-.header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
-  outline-offset: 3px;
-  pointer-events: none;
-}
-
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color_button);
-  outline-offset: 3px;
-}
-
-.header__theme-menu-button:focus,
-.header__theme-menu-button_active:focus {
-  outline: none;
-  text-decoration: 1px underline var(--accent-color);
-  text-underline-offset: 5px;
-}
-
-.header__theme-menu-button_active:hover {
-  outline: 1px solid var(--accent-color_button);
-  outline-offset: 3px;
-}
+/*---------- Конец Footer ----------*/
 
 @media (min-width: 768px) {
-          /* Начало Header */
-  .header {
-    padding: 10px 10px 0 0;
-  }
-
-  .header__theme-menu {
-    align-self: center;
-    margin: 0 20px 0 0;
-  }
-
+/*---------- Общие стили ----------*/
   .page::before {
-  top: 25px;
-  right: 25px;
+    top: 26px;
+    right: 26px;
   }
 
   .page::after {
-  top: 20px;
-  right: 50px;
+    top: 20px;
+    right: 50px;
   }
 
   .decorated-zone::before {
-  top: 20px;
-  right: 20px;
+    top: 20px;
+    right: 20px;
   }
 
-.decorated-zone::after {
-  width: 25px;
-  height: 25px;
-  bottom: 20px;
-  left: 20px;
+  .decorated-zone::after {
+    width: 25px;
+    height: 25px;
+    bottom: 20px;
+    left: 20px;
+  }
+/*---------- Общие стили ----------*/
+/*---------- Начало Header ----------*/
+.header {
+  padding: 0 10px 0 0;
+}
+
+.header__theme-menu {
+    margin: 15px 18px 0 0;
   }
 
-  .header_title {
+.header_title {
     display: inline;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -318,68 +282,59 @@ footer p {
     inline-size: 364px;
     margin: 0px 10px 184px 0;
   }
-          /*Конец Header*/
-          /*Начало Main*/
-  main {
+/*---------- Конец Header ----------*/
+/*---------- Начало Main ----------*/
+  .main {
     padding: 0 20px 0;
   }
 
-  .attention_factors {
+  .content-section {
+    margin-top: 80px;
+  }
+
+  .concentrate {
     display: grid;
     grid-template-columns: repeat(2, min-content);
     margin-top: 60px;
     justify-content: space-between;
   }
 
-  .section_main {
+  .content-section_main {
     min-inline-size: 472px;
     justify-self: end;
   }
 
-  .what_reduce_concentration {
+  .concentrate-reasons {
     display: grid;
     justify-content: start;
     margin-top: 80px;
   }
 
-  .what_reduce_concentration .section_title {
+  .concentrate-reasons .content-section_title {
     inline-size: 150px;
   }
 
   .goldfish {
-    display: grid;
     grid-template-columns: 1fr min-content;
-    margin-top: 80px;
-    justify-content: space-between;
+    grid-template-rows: 1fr min-content;
+    grid-auto-flow: column;
   }
 
-  .goldfish article {
-    inline-size: 472px;
+  .content-section_title {
+    grid-row: 1 / -1;
   }
 
-  .goldfish.section_title {
-    inline-size: 250px;
-  }
-
-  article .section_title-advices {
-    margin: 0 20px;
-  }
-
-  .pictures {
-    margin-top: 80px;
-  }
-
-  .pictures .li_title {
-    margin-bottom: 20px;
-    font-weight: var(--font-weight_bold);
+  .goldfish-advices {
+    height: fit-content;
+    grid-row: 1;
   }
 
   .pictures_images {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, minmax(229px, auto));
     grid-template-rows: repeat(3, auto);
     gap: 20px;
-    overflow: hidden;
   }
 
   .pictures_images-ice_cream {
@@ -415,27 +370,26 @@ footer p {
     display: block;
     overflow: hidden;
   }
-          /*Конец Main*/
-          /*Начало Footer*/
-
+/*---------- Конец Main ----------*/
+/*---------- Начало Footer ----------*/
   .footer {
     margin-top: 60px;
     min-height: 1024px;
   }
-        /*Конец Footer*/
+/*---------- Конец Footer ----------*/
 }
 
 @media (min-width: 1024px) {
-        /*Начало Header*/
+/*---------- Начало Header ----------*/
   .header__theme-menu {
     margin: 10px 0 0 10px;
     align-self: start;
+    justify-self: center;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
-    margin: 0;
-    justify-self: center;
+    margin-top: 10px;
     gap: 25px;
   }
 
@@ -444,36 +398,34 @@ footer p {
     align-self: center;
     margin: 0 10px 20px 0;
   }
-
-  .header_title-text p {
-    word-spacing: 0%;
-  }
-        /*Конец Header*/
-        /*Начало Main*/
-  .attention_factors {
-    display: grid;
+/*---------- Конец Header ----------*/
+/*---------- Начало Main ----------*/
+  .concentrate {
     grid-template-columns: min-content 1fr;
     margin-top: 60px;
     justify-content: space-between;
   }
 
-  .attention_factors .section_title {
-    min-inline-size: 335px;
+  .concentrate .content-section_title {
+    min-inline-size: 315px;
   }
 
-  .what_reduce_concentration .section_title {
-    min-inline-size: 280px;
+  .concentrate .content-section_main {
+    min-inline-size: auto;
   }
 
-  .what_reduce_concentration .section_main {
-    display: flex;
-    gap: 20px;
+  .concentrate-reasons .content-section_main {
+    grid-auto-flow: column;
   }
 
-  .what_reduce_concentration .section_main-item {
+  .concentrate-reasons .content-section_main-item {
     display: flex;
     flex-direction: column;
     min-width: 315px;
+  }
+
+  .concentrate-reasons .content-section_title {
+    min-inline-size: 280px;
   }
 
   .goldfish {
@@ -481,28 +433,18 @@ footer p {
     justify-content: space-between;
   }
 
-  .goldfish .section_title {
+  .goldfish .content-section_title {
     min-inline-size: 315px;
   }
-
-  .goldfish article {
-    inline-size: auto;
-  }
-
-  .pictures_images {
-    grid-template-columns: repeat(3, minmax(315px, auto));
-    grid-template-rows: repeat(3, auto);
-  }
-        /*Конец Main*/
-        /*Начало Footer*/
-
+/*---------- Конец Main ----------*/
+/*---------- Начало Footer ----------*/
   .footer {
-    margin-top: 60px;
     min-height: 768px;
+    height: 100vh;
   }
 
-  footer p {
+  .footer_text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-        /*Конец Footer*/
+/*---------- Конец Footer ----------*/
 }
