@@ -61,7 +61,6 @@
 
 .background-accent {
   background-color: var(--accent-color);
-  color: var(--li-title_text-color);
 }
 
 .text-accent {
