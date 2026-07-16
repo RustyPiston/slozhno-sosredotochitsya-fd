@@ -80,8 +80,8 @@
   outline-offset: 3px;
 }
 
-.header__theme-menu-button:focus-visible,
-.header__theme-menu-button_active:focus-visible {
+.header__theme-menu-button:focus,
+.header__theme-menu-button_active:focus {
   text-decoration: none;
   border: none;
 }
@@ -229,6 +229,10 @@
 
 .goldfish .li-title {
   font-weight: var(--font-weight_normal);
+}
+
+.goldfish .content-section_main-item {
+  gap: 13px;
 }
 
 .pictures.content-section {
