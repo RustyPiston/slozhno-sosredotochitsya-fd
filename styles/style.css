@@ -80,8 +80,14 @@
   outline-offset: 3px;
 }
 
-.header__theme-menu-button:focus,
-.header__theme-menu-button_active:focus {
+.header__theme-menu-button:focus-visible,
+.header__theme-menu-button_active:focus-visible {
+  text-decoration: none;
+  border: none;
+}
+
+.header__theme-menu-button:focus-visible,
+.header__theme-menu-button_active:focus-visible {
   outline: none;
   text-decoration: 1px underline var(--decorative-color);
   text-underline-offset: 5px;
@@ -109,6 +115,12 @@
 .text-link:focus-visible {
   text-decoration: none;
   outline: 1px solid var(--link_decoration-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-dark .text-link:focus-visible {
+    outline: 1px solid var(--main_text-color);
+  }
 }
 /*---------- Общие стили ----------*/
 /*---------- Начало Header ----------*/
@@ -143,7 +155,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--decorative-color);
   text-transform: lowercase;
 }
 
@@ -394,6 +406,10 @@
     margin-top: 60px;
     min-height: 1024px;
   }
+
+  .footer_text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 /*---------- Конец Footer ----------*/
 }
 
@@ -434,6 +450,8 @@
 
   .concentrate-reasons .content-section_main {
     grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .concentrate-reasons .content-section_main-item {
